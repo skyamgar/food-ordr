@@ -1,0 +1,31 @@
+<table>
+  <tr>
+    <th> Product Name </th>
+    <th> Product Description </th>
+    <th> Product Price </th>
+    <th> Product Quantity </th>
+  </tr>
+
+  <% @cart.order_products.each do |order_product| %>
+    <tr>
+      <td>
+        <%= order_product.food_item.name %>
+      </td>
+      <td>
+        <%= order_product.food_item.description %>
+      </td>
+      <td>
+        <%= order_product.food_item.price %>
+      </td>
+      <td>
+        <%= order_product.quantity %>
+      </td>
+      <td>
+        <%= button_to "Delete", order_product_path(order_product.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<div class='list_action'>
+  <%= button_to 'Checkout', new_order_path(cart_id: @cart.id), class: 'button', method: 'get'%></br>
+</div>

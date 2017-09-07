@@ -1,0 +1,10 @@
+<%= form_for @order, url: {action: "create"} do |f| %>
+  <%= f.fields_for :address, @order.address do |a| %>
+    Address: <%= a.text_field :address %>
+
+    Locality: <%= a.collection_select(:locality_id, Locality.all, :id, :name) %>
+    <br/>
+
+  <% end %>
+  <%= f.submit %>
+<% end %>
