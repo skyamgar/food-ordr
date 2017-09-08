@@ -1,9 +1,8 @@
 ActiveAdmin.register FoodItem do
 
-  permit_params :name, :description, :price, :tag_list
+  permit_params :name, :description, :price
 
   filter :name
-  filter :tags
   filter :price
 
   form do |f|

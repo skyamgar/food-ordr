@@ -1,0 +1,24 @@
+- User enters email and password and gets logged in.
+
+- User should be authenticated.
+
+- If credentials doesn't match render the same login page.
+
+- Food Items index page should be shown after user logges in.
+
+- Cart should be created. Check count in Cart table.
+
+- Add to cart creates order products.
+
+- Checkout creates order. Check order count.
+
+- Check count of Address after order is created. Check count of order products.
+
+- With /admin URL user should be redirected to admin panel after user logges in.
+
+- Create food item in admin panel and check count of it. It should get redirected to index page once successfully created food item. Or should render same page if fails validation.
+
+Should show the validation errors.
+In this case count shouldn't increase.
+
+

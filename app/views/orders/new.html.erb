@@ -6,5 +6,7 @@
     <br/>
 
   <% end %>
+  Payment Method: <%= f.collection_select(:payment_method_id, PaymentMethod.all, :id, :name) %>
+    <br/>
   <%= f.submit %>
 <% end %>

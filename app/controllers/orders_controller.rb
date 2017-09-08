@@ -29,6 +29,6 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit(address_attributes: [:address, :locality_id])
+    params.require(:order).permit(:payment_method_id, address_attributes: [:address, :locality_id])
   end
 end
